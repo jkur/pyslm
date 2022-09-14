@@ -276,7 +276,7 @@ class BaseHatcher(abc.ABC):
         for path in paths:
             pc.AddPath(BaseHatcher.scaleToClipper(path),
                        pyclipper.JT_SQUARE,
-                       pyclipper.ET_CLOSEDPOLYGON)
+                       pyclipper.ET_CLOSEDLINE)
 
         # Perform the offseting operation
         boundaryOffsetPolys = pc.Execute2(clipperOffset)
